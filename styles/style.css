@@ -250,7 +250,7 @@ footer .footer-links a {
     }
 
     footer .footer-links {
-        flex-direction: column; /* Stack links on mobile */
+        flex-direction: row; /* Stack links on mobile */
         gap: 10px;
     }
 }
