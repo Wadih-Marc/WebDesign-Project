@@ -139,7 +139,60 @@ position: relative;               /* Establishes the relative positioning contex
         transform: translateY(0);   /* Moves element back to original position */
     }
 }
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
+/* Media Query for Tablet (max-width: 1024px) and Phone (max-width: 768px) */
+@media (max-width: 1024px) {
+    /* Hide the regular navigation menu */
+    nav ul {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    /* Show the menu when toggled */
+    .menu-active ul {
+        display: flex;
+    }
+
+    /* Style the links in the hamburger menu */
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Specific styles for smaller phones can go here if needed */
+    nav ul {
+        display: none; /* Keep hidden by default */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu-active ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
 /* Responsive adjustments for tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
     .sub-menu {
@@ -250,7 +303,7 @@ footer .footer-links a {
     }
 
     footer .footer-links {
-        flex-direction: row; /* Stack links on mobile */
+        flex-direction: column; /* Stack links on mobile */
         gap: 10px;
     }
 }
