@@ -284,7 +284,16 @@
 });
 
 </script>
+ <script>
+        // JavaScript for toggling the menu
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const navMenu = document.getElementById('nav-menu');
 
+        hamburgerIcon.addEventListener('click', () => {
+            // Toggle the 'menu-active' class to show/hide the menu
+            navMenu.classList.toggle('menu-active');
+        });
+    </script>
 
 </body>
 </html>
