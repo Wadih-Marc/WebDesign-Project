@@ -142,9 +142,29 @@ position: relative;               /* Establishes the relative positioning contex
 /* Hamburger menu styles */
 .hamburger {
     display: none;
-    font-size: 30px;
+    flex-direction: column;
     cursor: pointer;
+    gap: 4px;
+    position: absolute; /* Position it absolutely within the navbar */
+    top: 15px; /* Align with the top */
+    right: 15px; /* Align to the right */
 }
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+/* Mobile Menu - Hide the menu by default */
+nav ul {
+    display: flex;
+}
+
+.menu-active ul {
+    display: flex;
+}
+
 
 /* Media Query for Tablet (max-width: 1024px) and Phone (max-width: 768px) */
 @media (max-width: 1024px) {
